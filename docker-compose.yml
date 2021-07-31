@@ -5,6 +5,8 @@ services:
     build: api/.
     ports:
       - "8080:8080"
+    volumes:
+      - '/home/dayserivera/ARQUITETURA_DE_MICROCONTAINERS/api:/home'
     depends_on:
       - mysql
 
