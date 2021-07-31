@@ -2,15 +2,12 @@ version: '3'
 services:
 
   api:
-    image: dayserivera/arquiteturademicrocontainers_mysql
+    image: dayserivera/arquiteturademicrocontainers_api
     restart: on-failure
     ports:
       - "8080:8080"    
     depends_on:
-      - mysql    
-    environment:
-      MYSQL_DATABASE: notes_app            
-      MYSQL_ROOT_PASSWORD: root
+      - mysql      
     networks:
       - net-backend  
   mysql:
