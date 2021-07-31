@@ -2,8 +2,7 @@ version: '3'
 services:
 
   api:
-    build: api/.
-    restart: on-failure
+    image: dayserivera/arquiteturademicrocontainers_mysql
     ports:
       - "8080:8080"    
     depends_on:
@@ -11,8 +10,8 @@ services:
     networks:
       - net-backend  
   mysql:
-    container_name: mysql
-    build: mysql/.
+    image: dayserivera/arquiteturademicrocontainers_mysql
+    container_name: mysql    
     ports:
       - "3306:3306"
     hostname: mysql
