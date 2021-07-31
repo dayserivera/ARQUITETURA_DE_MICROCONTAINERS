@@ -1,4 +1,4 @@
-create database notes_app;
+create database if not exists notes_app;
 use notes_app;
 
 create table if not exists notes (
