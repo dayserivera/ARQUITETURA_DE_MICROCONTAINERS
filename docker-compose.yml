@@ -1,0 +1,19 @@
+version: '1'
+services:
+
+  api:
+    build: api/.
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+
+  mysql:
+    build: mysql/.
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: root
