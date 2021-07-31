@@ -30,3 +30,4 @@ services:
       - "3306"
 networks:
   net-backend:
+    driver: bridge
