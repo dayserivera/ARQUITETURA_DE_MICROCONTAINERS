@@ -28,5 +28,5 @@ services:
       - net-backend   
     expose:
       - "3306"
-  networks:
-    net-backend:
+networks:
+  net-backend:
